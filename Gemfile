@@ -34,3 +34,7 @@ group :development, :test do
   gem "escape_utils"
   gem "jasmine"
 end
+
+group :production do
+  gem "pg"
+end
