@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Start date:</b>
+  <%= @deal.start_date %>
+</p>
+
+<p>
+  <b>End date:</b>
+  <%= @deal.end_date %>
+</p>
+
+<p>
+  <b>Mils:</b>
+  <%= @deal.mils %>
+</p>
+
+<p>
+  <b>Term:</b>
+  <%= @deal.term %>
+</p>
+
+<p>
+  <b>Annual kwh:</b>
+  <%= @deal.annual_kwh %>
+</p>
+
+<p>
+  <b>Term kwh:</b>
+  <%= @deal.term_kwh %>
+</p>
+
+
+<%= link_to 'Edit', edit_deal_path(@deal) %> |
+<%= link_to 'Back', deals_path %>
