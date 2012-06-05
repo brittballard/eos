@@ -1,11 +1,12 @@
 Eos::Application.routes.draw do
+
+  root :to => "home#index"
+
+  resources :providers
+  
   resources :clients
 
   resources :deals
-
-  get "home/index"
-
-  resources :providers
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
