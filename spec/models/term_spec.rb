@@ -16,7 +16,7 @@ describe Term do
     end
     
     it 'should set the date to the start date of the deal' do
-      @term.calculate(@deal).date.to_s.should == "1980-03-11 00:00:00 UTC"
+      @term.calculate(@deal).date.should == DateTime.new(1980, 3, 11)
     end
   end
 end
