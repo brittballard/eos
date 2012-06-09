@@ -1,0 +1,2 @@
+module ResidualsHelper
+end

@@ -1,5 +1,11 @@
 Eos::Application.routes.draw do
 
+  resources :residuals
+
+  resources :terms
+
+  resources :payments
+
   root :to => "home#index"
 
   resources :providers

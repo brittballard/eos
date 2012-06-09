@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120605033329) do
+ActiveRecord::Schema.define(:version => 20120609170313) do
 
   create_table "clients", :force => true do |t|
     t.string   "name"
@@ -22,10 +22,17 @@ ActiveRecord::Schema.define(:version => 20120605033329) do
   create_table "deals", :force => true do |t|
     t.datetime "start_date"
     t.datetime "end_date"
-    t.decimal  "mils",       :precision => 10, :scale => 0
+    t.decimal  "mils",       :precision => 10, :scale => 5
     t.decimal  "term",       :precision => 10, :scale => 0
     t.decimal  "annual_kwh", :precision => 10, :scale => 0
     t.decimal  "term_kwh",   :precision => 10, :scale => 0
+    t.datetime "created_at",                                :null => false
+    t.datetime "updated_at",                                :null => false
+  end
+
+  create_table "payments", :force => true do |t|
+    t.datetime "date"
+    t.decimal  "amount",     :precision => 10, :scale => 0
     t.datetime "created_at",                                :null => false
     t.datetime "updated_at",                                :null => false
   end
@@ -34,6 +41,20 @@ ActiveRecord::Schema.define(:version => 20120605033329) do
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "residuals", :force => true do |t|
+    t.integer  "start_month"
+    t.integer  "end_month"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "terms", :force => true do |t|
+    t.integer  "start_month"
+    t.integer  "end_month"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
 end
