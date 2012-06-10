@@ -160,5 +160,4 @@ describe DealsController do
       response.should redirect_to(deals_url)
     end
   end
-
 end

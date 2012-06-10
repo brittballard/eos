@@ -1,3 +1,13 @@
-<h1>Claele!</h1><br />
-<%= image_tag "roxy.jpg" %>
-<p>Soon this will be our app...</p><br />
+<%= form_tag("/calculate", :method => "post", :class => "form-horizontal") do %>
+  <%= label_tag(:mils, "Mils")%>
+  <%= text_field_tag(:mils) %>
+  <%= label_tag(:term, "Term")%>
+  <%= text_field_tag(:term) %>
+  <%= label_tag(:start_date, "Start Date")%>
+  <%= text_field_tag(:start_date) %>
+  <%= label_tag(:end_date, "End Date")%>
+  <%= text_field_tag(:end_date) %>
+  <%= label_tag(:term_kwh, "Term Kwh")%>
+  <%= text_field_tag(:term_kwh) %>
+  <%= submit_tag("Calculate", :class => "btn btn-primary")%>
+<% end %>

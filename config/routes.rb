@@ -1,12 +1,14 @@
 Eos::Application.routes.draw do
 
+  match "calculate" => "home#calculate"
+
+  root :to => "home#index"
+
   resources :residuals
 
   resources :terms
 
   resources :payments
-
-  root :to => "home#index"
 
   resources :providers
   

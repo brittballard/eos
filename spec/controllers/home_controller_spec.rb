@@ -9,4 +9,10 @@ describe HomeController do
     end
   end
 
+  describe 'post Calculate' do
+    it 'render the calculate view with a list of payments' do
+      
+    end
+  end
+
 end

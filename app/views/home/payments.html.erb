@@ -1,0 +1,12 @@
+<table class="table table-striped">
+  <tr>
+    <th>Month</th>
+    <th>Amount</th>
+  <tr>
+  <% @payments.each do |payment| %>
+  <tr>
+    <th><%= payment.date.to_date %></th>
+    <th><%= payment.amount %></th>
+  <tr>
+  <% end %>
+</table>
