@@ -1,10 +1,16 @@
 Eos::Application.routes.draw do
 
+  devise_for :users
+
   match "calculate" => "home#calculate"
   
   match "calculate_stream" => "home#calculate_stream"
   
   match "stream" => "home#stream"
+
+  authenticated :user do
+    root :to => 'home#index'
+  end
 
   root :to => "home#index"
 
