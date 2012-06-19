@@ -1,6 +1,10 @@
 Eos::Application.routes.draw do
 
   match "calculate" => "home#calculate"
+  
+  match "calculate_stream" => "home#calculate_stream"
+  
+  match "stream" => "home#stream"
 
   root :to => "home#index"
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120610221652) do
+ActiveRecord::Schema.define(:version => 20120614225230) do
 
   create_table "clients", :force => true do |t|
     t.string   "name"
@@ -26,6 +26,12 @@ ActiveRecord::Schema.define(:version => 20120610221652) do
     t.decimal  "term",       :precision => 10, :scale => 0
     t.decimal  "annual_kwh", :precision => 10, :scale => 0
     t.decimal  "term_kwh",   :precision => 10, :scale => 0
+    t.datetime "created_at",                                :null => false
+    t.datetime "updated_at",                                :null => false
+  end
+
+  create_table "final_lump_sums", :force => true do |t|
+    t.decimal  "percentage", :precision => 10, :scale => 5
     t.datetime "created_at",                                :null => false
     t.datetime "updated_at",                                :null => false
   end
