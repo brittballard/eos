@@ -1,0 +1,21 @@
+<div id = "calculator">
+<%= form_tag("/calculate_stream", :method => "post", :class => "form-horizontal") do %>
+  <h3>Stream Payment Calculator</h3>  
+  <%= label_tag(:mils, "Mils")%>
+  <%= text_field_tag(:mils) %>
+  <%= label_tag(:term, "Term")%>
+  <%= text_field_tag(:term) %>
+  <%= label_tag(:start_date, "Start Date")%>
+  <%= text_field_tag(:start_date) %>
+  <%= label_tag(:end_date, "End Date")%>
+  <%= text_field_tag(:end_date) %>
+  <%= label_tag(:term_kwh, "Term Kwh")%>
+  <%= text_field_tag(:term_kwh) %>
+  <%= label_tag(:percentage, "Final Lump Sum Percentage")%>
+  <%= text_field_tag(:percentage) %>
+  <%= submit_tag("Calculate", :class => "btn btn-primary")%>
+<% end %>
+<div id="links">
+<%= link_to "Green Mountain Payment Calculator", "/" %>
+</div>
+</div>
