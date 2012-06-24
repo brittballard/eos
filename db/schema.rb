@@ -11,12 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120619220606) do
+ActiveRecord::Schema.define(:version => 20120624172441) do
 
   create_table "clients", :force => true do |t|
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "date_modifiers", :force => true do |t|
+    t.integer  "number_of_days_adjustment"
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
   end
 
   create_table "deals", :force => true do |t|
@@ -36,11 +42,24 @@ ActiveRecord::Schema.define(:version => 20120619220606) do
     t.datetime "updated_at",                                :null => false
   end
 
+  create_table "modifiers", :force => true do |t|
+    t.integer  "contract_modifier_id"
+    t.string   "contract_modifier_type"
+    t.datetime "created_at",             :null => false
+    t.datetime "updated_at",             :null => false
+  end
+
   create_table "payments", :force => true do |t|
     t.datetime "date"
     t.decimal  "amount",     :precision => 10, :scale => 5
     t.datetime "created_at",                                :null => false
     t.datetime "updated_at",                                :null => false
+  end
+
+  create_table "percentage_modifiers", :force => true do |t|
+    t.decimal  "percentage_to_pay", :precision => 10, :scale => 0
+    t.datetime "created_at",                                       :null => false
+    t.datetime "updated_at",                                       :null => false
   end
 
   create_table "providers", :force => true do |t|

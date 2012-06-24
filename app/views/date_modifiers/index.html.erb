@@ -1,0 +1,21 @@
+<h1>Listing date_modifiers</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @date_modifiers.each do |date_modifier| %>
+  <tr>
+    <td><%= link_to 'Show', date_modifier %></td>
+    <td><%= link_to 'Edit', edit_date_modifier_path(date_modifier) %></td>
+    <td><%= link_to 'Destroy', date_modifier, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Date modifier', new_date_modifier_path %>

@@ -1,5 +1,11 @@
 Eos::Application.routes.draw do
 
+  resources :modifiers
+
+  resources :date_modifiers
+
+  resources :percentage_modifiers
+
   devise_for :users
 
   match "calculate" => "home#calculate"

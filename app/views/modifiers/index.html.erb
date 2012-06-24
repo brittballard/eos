@@ -1,0 +1,21 @@
+<h1>Listing modifiers</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @modifiers.each do |modifier| %>
+  <tr>
+    <td><%= link_to 'Show', modifier %></td>
+    <td><%= link_to 'Edit', edit_modifier_path(modifier) %></td>
+    <td><%= link_to 'Destroy', modifier, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Modifier', new_modifier_path %>

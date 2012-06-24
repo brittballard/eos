@@ -9,12 +9,11 @@ describe FinalLumpSum do
 	
 	it 'should return an array of payments' do
 	  result = @final_lump_sum.calculate(@deal)
-	  result.should be_an_instance_of(Array)
-	  result[0].should be_an_instance_of(Payment)
+	  result.should be_an_instance_of(Payment)
 	end
 	
 	it 'should calculate payment in the amount of mils * term_kwh * percentage' do
-	  @final_lump_sum.calculate(@deal)[0].amount.should == 90
+	  @final_lump_sum.calculate(@deal).amount.should == 90
 	end
   end
 end

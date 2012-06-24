@@ -1,0 +1,17 @@
+<%= form_for(@date_modifier) do |f| %>
+  <% if @date_modifier.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@date_modifier.errors.count, "error") %> prohibited this date_modifier from being saved:</h2>
+
+      <ul>
+      <% @date_modifier.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
