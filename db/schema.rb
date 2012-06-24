@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120624172441) do
+ActiveRecord::Schema.define(:version => 20120624175746) do
 
   create_table "clients", :force => true do |t|
     t.string   "name"
@@ -57,7 +57,7 @@ ActiveRecord::Schema.define(:version => 20120624172441) do
   end
 
   create_table "percentage_modifiers", :force => true do |t|
-    t.decimal  "percentage_to_pay", :precision => 10, :scale => 0
+    t.decimal  "percentage_to_pay", :precision => 10, :scale => 5
     t.datetime "created_at",                                       :null => false
     t.datetime "updated_at",                                       :null => false
   end
