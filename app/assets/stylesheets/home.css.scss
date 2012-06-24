@@ -1,3 +1,37 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+html{background-color:#000000;}
+body{background-color:#000000;}
+
+div{background-color:#000000;padding-bottom:10px}
+
+form{background-color:#333333;padding:20px;width:400px}
+
+label{color:#FFFFFF;}
+
+h3{color:#FFFFFF;padding-bottom:3px}
+p{color:#ffffff; padding: 5px}
+
+a:link{background-color:#000000;color:#FFFFFF;padding-left: 10px}
+a:hover{background-color:#000000;color:#FFFFFF;}
+
+
+.table-striped tbody tr:nth-child(even) td,
+.table-striped tbody tr:nth-child(even) th {
+  background-color: #ffffff;
+}
+
+thead {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 15px;
+	padding: .2em 0 .2em .5em;
+	text-align: center;
+	color: #4B4B4B;
+	background-color: #C8C8C8;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#e3e3e3), color-stop(.6,#B3B3B3));
+	background-image: -moz-linear-gradient(top, #D6D6D6, #B0B0B0, #B3B3B3 90%);
+	border-bottom: solid 1px #999;
+}
+

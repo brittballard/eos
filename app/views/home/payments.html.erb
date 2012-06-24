@@ -1,12 +1,18 @@
+<div class = "span4">
 <table class="table table-striped">
+  <thead>
   <tr>
     <th>Month</th>
     <th>Amount</th>
   <tr>
+  </thead>
+  <tbody>
   <% @payments.each do |payment| %>
   <tr>
-    <th><%= payment.date.to_date %></th>
-    <th><%= payment.amount %></th>
-  <tr>
+    <td><%= payment.date.to_date %></td>
+    <td><%= payment.amount %></td>
+  </tr>
   <% end %>
+  </tbody>
 </table>
+</div>

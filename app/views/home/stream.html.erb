@@ -2,10 +2,9 @@
 <p><%= notice %></p>
 <p><%= alert %></p>
 </div>
-
 <div id = "calculator">
-<%= form_tag("/calculate", :method => "post", :class => "form-horizontal") do %>
-  <h3>Green Mountain Payment Calculator</h3>  
+<%= form_tag("/calculate_stream", :method => "post", :class => "form-horizontal") do %>
+  <h3>Stream Payment Calculator</h3>  
   <%= label_tag(:mils, "Mils")%>
   <%= text_field_tag(:mils) %>
   <%= label_tag(:term, "Term")%>
@@ -21,7 +20,7 @@
   <%= submit_tag("Calculate", :class => "btn btn-primary")%>
 <% end %>
 <div id="links">
-<%= link_to "Stream Payment Calculator", stream_path %>
+<%= link_to "Green Mountain Payment Calculator", "/" %>
 <%= link_to "Sign Out", destroy_user_session_path, :method => "delete" %>
 <%= link_to "Sign In", new_user_session_path %>
 </div>

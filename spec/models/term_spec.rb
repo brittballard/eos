@@ -10,7 +10,7 @@ describe Term do
     it 'should return a single payment' do
       @term.calculate(@deal).should be_an_instance_of(Payment)
     end
-    
+      
     it 'should * deal.mils by deal.term_kwh and return a payment for that amount * by (term.end_month - term.start_month) / deal.term' do
       @term.calculate(@deal).amount.should be_within(0.1).of(300)
     end
