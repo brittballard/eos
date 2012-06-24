@@ -1,7 +1,7 @@
 Given /^I am using the Green Mountain Payment Calculator$/ do
 	visit('/')
-	fill_in "user_email", :with=>douglemme@yahoo.com
-	fill_in "user_password", :with=>test1234
+	fill_in "user_email", :with=> "douglemme@yahoo.com"
+	fill_in "user_password", :with=> "test1234"
 	click_button "Sign in"
 end
 
